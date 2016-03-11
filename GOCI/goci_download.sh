@@ -5,8 +5,9 @@
 
 for FILE in `cat scene_list.txt`
 do 
-	wget http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/"$FILE"
-        mv $FILE  ${FILE:0:25}
+	wget --content-disposition  http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/"$FILE".gz
+        mv $FILE.gz  ${FILE:0:25}/$FILE.gz
+	gunzip ${FILE:0:25}/$FILE.gz
 	let i++
         echo $i
 done

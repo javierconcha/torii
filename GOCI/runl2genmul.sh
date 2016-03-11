@@ -12,7 +12,7 @@ sed -n "${range:0:2}","${range:2:2}"p file_list.txt > file_list"$range".txt
 for FILE in `cat file_list"$range".txt`
 do 	
 	echo running l2gen on $FILE 	
-	l2gen ifile=./"$FILE"  ofile1=./"$FILE"_L2n1.nc aer_opt=-1 l2prod="default,ag_412_mlrc"
+	l2gen ifile=./"$FILE"  ofile1=./"$FILE"_L2.nc l2prod="default,ag_412_mlrc"
 
 	let i++
 	echo $i
