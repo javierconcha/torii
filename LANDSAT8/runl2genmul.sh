@@ -7,6 +7,13 @@ echo "Type the range that you want to run (4 digits), followed by [ENTER]:"
 
 read range
 
+if [ ${range:2:2} -ne "00" ]
+then
+	sed -n "${range:0:2}","${range:2:2}"p file_list.txt > file_list"$range".txt
+else
+	sed -n "${range:0:2}","${range:0:2}"p file_list.txt > file_list"$range".txt
+fi
+
 for FILE in `cat file_list"$range".txt`
 do 	
 	echo running l2gen on $FILE 	
