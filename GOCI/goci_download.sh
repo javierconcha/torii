@@ -13,7 +13,7 @@ do
 	done
 	mkdir -p ${FILE:0:25}/
         mv "${FILE:0:25}"*.gz  ${FILE:0:25}/
-	gunzip ${FILE:0:25}/${FILE:0:25}*.gz
+	gunzip -vf ${FILE:0:25}/${FILE:0:25}*.gz
 	let i++
         echo $i
 done
