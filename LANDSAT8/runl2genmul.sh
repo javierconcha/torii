@@ -17,7 +17,7 @@ fi
 for FILE in `cat file_list"$range".txt`
 do 	
 	echo running l2gen on $FILE 	
-	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n1.nc aer_opt=-1 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc"
+	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n1.nc aer_opt=-1 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc,rhos_vvv"
 
 	let i++
 	echo $i
