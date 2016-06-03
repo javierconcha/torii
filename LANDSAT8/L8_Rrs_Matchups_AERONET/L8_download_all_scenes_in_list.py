@@ -44,8 +44,9 @@ for n in lines:
     if status == 0:
 	    print "Image EXISTS on ftp site. Download successful"
 	    print " Uncompressing tar.gz files ...."
+	    os.system("mkdir "+L8filename)   	
             os.system("tar -zxvf "+L8filename+".tar.gz")
-
+	    os.system("mv "+L8filename+"* "+L8filename+"/" )   
 	    # Clean up unused files
             # comment out which files you want to keep
 	    # os.system("rm *tar.gz")
