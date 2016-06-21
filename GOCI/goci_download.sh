@@ -5,7 +5,7 @@
 
 for FILE in `cat scene_list.txt`
 do 	
-	grep "${FILE:0:25}" goci_l1.txt > list_temp.txt
+	grep "${FILE:0:25}" goci_l1b.txt > list_temp.txt
 	prefix=http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/
 	for line in `cat list_temp.txt`
 	do
