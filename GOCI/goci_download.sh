@@ -1,19 +1,24 @@
 #!/bin/bash
 # Script to download GOCI images sequentially
 # by Javier A. Concha
-# 2016-02-24
+# Created 2016-02-24
+# Modified 2016-06-21
 
-for FILE in `cat scene_list.txt`
+rm file_list.txt
+
+for FILE in `cat scene_dates.txt`
 do 	
-	grep "${FILE:0:25}" goci_l1b.txt > list_temp.txt
+	grep "$FILE" goci_l1b.txt > list_temp.txt
+	grep "$FILE" goci_l1b.txt >> file_list.txt
+
 	prefix=http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/
 	for line in `cat list_temp.txt`
 	do
 		wget --content-disposition  "$prefix$line"
 	done
-	mkdir -p ${FILE:0:25}/
-        mv "${FILE:0:25}"*.gz  ${FILE:0:25}/
-	gunzip -vf ${FILE:0:25}/${FILE:0:25}*.gz
+	mkdir -p $FILE/
+        mv *"$FILE"*.gz  $FILE/
+	gunzip -vf $FILE/*$FILE*.gz
 	let i++
         echo $i
 done
