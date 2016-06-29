@@ -53,10 +53,11 @@ for n in lines:
             		# comment out which files you want to keep
 	    		os.system("rm *tar.gz")
 	    		# Keep just the Thermal Bands
-            		os.system("rm *_B10*")
-	    		os.system("rm *_B11*")
+            		# os.system("rm *_B10*")
+	    		# os.system("rm *_B11*")
 	    		# Keep BQA for L8 cloud detection
-            		os.system("rm *_BQA*")
+            		# os.system("rm *_BQA*")
+			
 			os.system("echo "+L8filename+" >> file_on_site.txt")
 
 			os.system("mv "+L8filename+"* "+L8filename+"/" )
