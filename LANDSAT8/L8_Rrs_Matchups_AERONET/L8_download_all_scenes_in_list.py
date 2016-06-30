@@ -15,7 +15,7 @@ import sys
 
 #  NOTE to download L7 scenes you need to modify this code and use different ports
 
-infile = "scene_listAERONET_all.txt"
+infile = "scene_listAERONET_not_found.txt"
 f1 =  open(infile, 'r+')
 lines = f1.readlines()
 
@@ -63,6 +63,9 @@ for n in lines:
 			os.system("mv "+L8filename+"* "+L8filename+"/" )
 	else:
 		os.system("echo "+L8filename+" >> file_already_downloaded.txt")
+
+	os.system("rm index.html*")
+
 f1.close()
 
 

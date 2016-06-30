@@ -35,3 +35,5 @@ do
 	echo $i
 done
 echo l2gen run in multiple finished...
+
+tmux kill-window
