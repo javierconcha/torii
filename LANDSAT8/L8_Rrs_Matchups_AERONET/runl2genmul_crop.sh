@@ -26,9 +26,11 @@ do
 
 	echo running l2gen on $FILE 	
 	
-	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n2.nc aer_opt=-2 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc,rhos_vvv"  sline="$sline" eline="$eline" spixl="$spixl" epixl="$epixl"
+#	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n2.nc aer_opt=-2 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc,rhos_vvv"  sline="$sline" eline="$eline" spixl="$spixl" epixl="$epixl"
 
-#	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n2SWIR5x5.nc aer_opt=-2 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc,rhos_vvv" aer_wave_long=2201 aer_wave_short=1609 filter_file=/home/jconchas/ocssw/run/data/oli/msl12_filterUSER.dat filter_opt=1 sline="$sline" eline="$eline" spixl="$spixl" epixl="$epixl"
+	l2gen ifile=./"$FILE"/"$FILE"_MTL.txt ofile1=./"$FILE"/"$FILE"_L2n2SWIR5x5.nc aer_opt=-2 ctl_pt_incr=1 maskglint=1 l2prod="default,ag_412_mlrc,rhos_vvv" aer_wave_long=2201 aer_wave_short=1609 filter_file=/home/jconchas/ocssw/run/data/oli/msl12_filterUSER.dat filter_opt=1 sline="$sline" eline="$eline" spixl="$spixl" epixl="$epixl"
+
+	echo The return values is $?
 
 	let i++
 	echo $i

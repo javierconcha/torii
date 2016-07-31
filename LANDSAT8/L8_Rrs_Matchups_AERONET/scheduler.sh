@@ -1,9 +1,9 @@
 #!/bin/bash
-# Script to schedule multiple jubs using different tmux windows within a tmux session
+# Script to schedule multiple jobs using different tmux windows within a tmux session
 # Created by Javier Concha, 2016-06-24
 
 # number of jobs per window
-n_jobs=50
+n_jobs=5
 
 # tmux configuration
 # var for session name (to avoid repeated occurences)

@@ -8,7 +8,7 @@ import sys
 #
 #  Input "scene_list.txt"
 #  python V2.7.9
-
+#  Modified by: Javier Concha June 2015 javier.concha@nasa.gov
 #########################################################################################
 # ATTN YOU MUST ENTER YOUR OWN Earth Explorer Username and Password below XXXXX  YYYYYY #
 #########################################################################################
@@ -32,7 +32,8 @@ for n in lines:
 
     		os.system(image_call_step1)
 	
-    		image_call_step2 ="wget --load-cookies cookies.txt earthexplorer.usgs.gov/download/4923/"+L8filename+"/STANDARD/EE/ --no-check-certificate --output-document="+L8filename+".tar.gz"
+    		#image_call_step2 ="wget --load-cookies cookies.txt earthexplorer.usgs.gov/download/4923/"+L8filename+"/STANDARD/EE/ --no-check-certificate --output-document="+L8filename+".tar.gz"
+    		image_call_step2 ="wget --load-cookies cookies.txt earthexplorer.usgs.gov/download/5560/"+L8filename+"/STANDARD/EE/ --no-check-certificate --output-document="+L8filename+".tar.gz"
     		print image_call_step2
     		status = os.system(image_call_step2)
     		print " img download status = ", status, " a zero means file exists"
