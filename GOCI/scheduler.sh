@@ -3,7 +3,7 @@
 # Created by Javier Concha, 2016-06-24
 
 # number of jobs per window
-n_jobs=10
+n_jobs=1
 
 # tmux configuration
 # var for session name (to avoid repeated occurences)
@@ -18,7 +18,7 @@ tmux new-session -s "$sn" -n etc -d
 # Create a bunch of windows in /var/log
 cd ~/data2/GOCI/
 
-line_no=$(wc -l < file_list.txt)
+line_no=$(wc -l < idlatlonUNIQ.txt)
 max=$((line_no/n_jobs+1))
 
 for (( i = 1; i <= $max; i++ )) 
@@ -26,7 +26,7 @@ do
 	echo $i
 	LIM1=$(((i-1)*n_jobs+1))
 	LIM2=$((i*n_jobs))
-	cat runl2genmul_KORUS_OC.sh | sed 's"lim1"'$LIM1'"g' | sed 's"lim2"'$LIM2'"g' > runl2genmul_temp$LIM1$LIM2.sh
+	cat runl2genmul_AERONET.sh | sed 's"lim1"'$LIM1'"g' | sed 's"lim2"'$LIM2'"g' > runl2genmul_temp$LIM1$LIM2.sh
 	
 	chmod 755 ./runl2genmul_temp$LIM1$LIM2.sh
 	
