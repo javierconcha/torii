@@ -45,6 +45,7 @@ do
 		
 		echo $i
 	done
+	cd ..
 done
 
 rm idlatlon_listlim1lim2.txt

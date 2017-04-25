@@ -14,7 +14,13 @@ do
 	prefix=http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/
 	for line in `cat list_temp.txt`
 	do
-		wget --content-disposition  "$prefix$line"
+		if wget -S --spider "$prefix$line" 2>&1 | grep -q 'Remote file exists'; then
+			echo "Found $line, going to fetch it"
+			wget --content-disposition  "$prefix$line"
+		else
+			echo "File $line not found in the server!"
+			echo $file >> files_not_found.txt
+		fi
 	done
 	mkdir -p $FILE/
         mv *"$FILE"*.gz  $FILE/

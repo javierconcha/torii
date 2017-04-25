@@ -3,7 +3,7 @@
 # Created by Javier Concha, 2016-06-24
 
 # number of jobs per window
-n_jobs=1
+n_jobs=10
 
 # tmux configuration
 # var for session name (to avoid repeated occurences)
