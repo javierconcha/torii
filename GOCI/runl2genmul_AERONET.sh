@@ -25,7 +25,7 @@ do
 	do
 		let i++
 		if [ $i -eq 1 ]; then
-			lonlat2pixline -x 1 -y 1 "$FILE" "$LON" "$LAT" > "$FILE"_lonlat2pixline.o
+			lonlat2pixline -x 3 -y 3 "$FILE" "$LON" "$LAT" > "$FILE"_lonlat2pixline.o
 			eval "$(grep "sline" "$FILE"_lonlat2pixline.o)"
 			eval "$(grep "eline" "$FILE"_lonlat2pixline.o)"
 			eval "$(grep "spixl" "$FILE"_lonlat2pixline.o)"

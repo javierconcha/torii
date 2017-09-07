@@ -19,7 +19,7 @@ do
 			wget --content-disposition  "$prefix$line"
 		else
 			echo "File $line not found in the server!"
-			echo $file >> files_not_found.txt
+			echo $line >> files_not_found.txt
 		fi
 	done
 	mkdir -p $FILE/
