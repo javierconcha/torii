@@ -1,0 +1,11 @@
+ifile=COMS_GOCI_L1B_GA_20110528011643.he5
+ofile1=COMS_GOCI_L1B_GA_20110528011643.L2
+sline=4144 
+eline=5142 
+spixl=3169 
+epixl=5167 
+l2prod=default,ag_412_mlrc,poc,angstrom,aot_nnn,sena,senz,sola,solz,brdf,Lw_nnn,nLw_nnn,vgain_vvv
+gain=[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0] 
+vcal_nLw=2.16849,1.86759,1.26180,0.34174,0.02908,0.03109,0.00000,0.00000
+vcal_opt=2
+

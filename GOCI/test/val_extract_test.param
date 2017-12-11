@@ -1,0 +1,5 @@
+ifile=COMS_GOCI_L1B_GA_20110528011643.L2 
+ofile=COMS_GOCI_L1B_GA_20110528011643.L2.valregion
+valid_ranges=vgain_=0.5:1.5
+ignore_flags=LAND CLDICE LOWLW STRAYLIGHT ATMFAIL
+global_att=1
