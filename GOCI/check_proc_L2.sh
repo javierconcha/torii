@@ -5,10 +5,10 @@ i=1
 
 for LINE in `cat folder_list.txt`
 do 
-	echo $i	
 	echo $LINE
 	cd $LINE
-	find . -name "*solz"|wc -l
-	let i++
+	count=$(find . -name "*solz"|wc -l)
+	let i=$i+$count
 	cd ..
+	echo $i	
 done
