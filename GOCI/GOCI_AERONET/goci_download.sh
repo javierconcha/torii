@@ -5,13 +5,11 @@
 # Modified 2016-06-21
 
 rm file_list.txt
-rm files_not_found.txt
 
-for FILE in `cat scene_dates.txt`
+for FILE in `cat scene_dates_AERONET_UNIQ.txt`
 do 	
-	grep "$FILE" goci_l1b.txt > list_temp.txt
-	grep "$FILE" goci_l1b.txt >> file_list.txt
-
+	grep "$FILE" goci_l1_20180508.txt > list_temp.txt
+	grep "$FILE" goci_l1_20180508.txt >> file_list.txt
 	prefix=http://oceandata.sci.gsfc.nasa.gov/cgi/gethiddenfile/
 	for line in `cat list_temp.txt`
 	do
